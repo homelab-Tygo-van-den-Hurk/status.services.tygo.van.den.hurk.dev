@@ -1,0 +1,73 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+title:          Homepage - Tygo van den Hurk
+favicon:        https://tygo.van.den.hurk.dev/favicon.ico
+
+headerStyle:    clean # boxed
+target:         _self
+hideVersion:    true
+statusStyle:    "dot"
+
+background:
+    image:      https://images.unsplash.com/photo-1637825891028-564f672aa42c # /images/wallpaper.jpeg
+    blur:       sm 
+    saturate:   50
+    brightness: 100
+    opacity:    100 
+
+# quicklaunch:
+#   searchDescriptions:     true
+#   hideInternetSearch:     false # true
+#   showSearchSuggestions:  false # true
+#   hideVisitURL:           false # true
+
+layout:
+    - Entertainment:
+        icon: /icons/entertainment.svg
+        iconStyle: theme
+        style: row
+        columns: 3
+    
+    - Storage:
+        icon: /icons/storage.svg
+        iconStyle: theme
+        style: row
+        columns: 3
+
+    - Infrastructure:
+        icon: /icons/infrastructure.svg
+        iconStyle: theme
+        style: row
+        columns: 4
+
+    - Smart Home:
+        icon: /icons/smart-home.svg
+        iconStyle: theme
+        style: row
+        columns: 2
+
+    - Websites:
+        icon: /icons/website.svg
+        iconStyle: theme
+        style: row
+        columns: 5
+    
+    - Projects:
+        icon: /icons/server.svg # TODO : change to a different icon
+        iconStyle: theme
+        style: row
+        columns: 2
+
+    - Servers:
+        icon: /icons/server.svg
+        iconStyle: theme
+        style: row
+        columns: 4
+        
+    
+        
+# providers:
+#   openweathermap: openweathermapapikey
+#   weatherapi:     weatherapiapikey

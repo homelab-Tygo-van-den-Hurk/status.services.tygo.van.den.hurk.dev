@@ -1,0 +1,23 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/service-widgets
+
+- greeting:
+    text_size: xl
+    text: "Hey there, welcome! This is currently still in development, so you might see some \"offline\" services. Please don't worry about that, it will be fixed shortly."
+
+# - resources:
+#     cpu: true
+#     memory: true
+#     disk: /
+
+# - search:
+#     provider: duckduckgo
+#     focus: true 
+#     showSearchSuggestions: true
+    
+# - datetime:
+#     text_size: xl
+#     format:
+#       timeStyle: short
+      

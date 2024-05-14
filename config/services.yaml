@@ -1,0 +1,558 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+# Octoprint
+# Uptime Kuma 
+# Home Assistant
+# Mealie
+# Servarr
+# Jellyseerr
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ENTERTAINMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- Entertainment:
+    
+    #| Services for consuming Content
+    - Plex:             # TODO : Set up service
+        href:           https://plex.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://plex.services.tygo.van.den.hurk.dev
+        description:    Watch movies and TV show's using Plex.
+        icon:           plex.svg
+        widget:
+            type:       plex
+            url:        https://plex.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey  # TODO : get token
+
+    - Jellyfin:         # TODO : Set up service
+        href:           https://jellyfin.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://jellyfin.services.tygo.van.den.hurk.dev
+        description:    Watch movies and shows using Jellyfin.
+        icon:           jellyfin.svg
+        widget:
+            type:       jellyfin
+            url:        https://jellyfin.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+    - Audiobook shelf:  # TODO : Set up service
+        href:           https://audiobookshelf.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://audiobookshelf.services.tygo.van.den.hurk.dev
+        description:    Allows you to read eBooks, or listen to audio books.
+        icon:           audiobookshelf.svg
+        widget:
+            type:       audiobookshelf
+            url:        https://audiobookshelf.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+    #| Services for requesting Content
+    - Jellyseerr:       # TODO : Set up service
+        href:           https://jellyseerr.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://jellyseerr.services.tygo.van.den.hurk.dev
+        description:    Request movies and shows to be added to Jellyfin and Plex.
+        icon:           jellyseerr.svg
+        widget:
+            type:       jellyseerr
+            url:        https://jellyseerr.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+    - Overseerr:       # TODO : Set up service
+        href:           https://overseerr.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://overseerr.services.tygo.van.den.hurk.dev
+        description:    Request movies and shows to be added to Jellyfin and Plex.
+        icon:           overseerr.svg
+        widget:
+            type:       overseerr
+            url:        https://overseerr.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+    - Ombi:             # TODO : Set up service
+        href:           https://ombi.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://ombi.services.tygo.van.den.hurk.dev
+        description:    Request TV shows and movies.
+        icon:           ombi.svg
+        widget:
+            type:       ombi
+            url:        https://ombi.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+    #| Services for getting Content
+    - Radarr:           # TODO : Set up service
+        href:           https://radarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://radarr.services.tygo.van.den.hurk.dev
+        description:    Gets movies to watch off the internet.
+        icon:           radarr.svg
+        widget:
+            type:       radarr
+            url:        https://radarr.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            
+    - Sonarr:           # TODO : Set up service
+        href:           https://sonarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://sonarr.services.tygo.van.den.hurk.dev
+        description:    Gets shows to watch off the internet.
+        icon:           sonarr.svg
+        widget:
+            type:       sonarr
+            url:        https://sonarr.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+    - Readarr:           # TODO : Set up service
+        href:           https://readarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://readarr.services.tygo.van.den.hurk.dev
+        description:    Gets books to read off the internet.
+        icon:           readarr.svg
+        widget:
+            type:       readarr
+            url:        https://readarr.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            
+    - Bazarr:           # TODO : Set up service
+        href:           https://bazarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://bazarr.services.tygo.van.den.hurk.dev
+        description:    Gets subtitles for movies, or shows off the internet.
+        icon:           bazarr.svg
+        widget:
+            type:       bazarr
+            url:        https://bazarr.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            
+    - Prowlarr:         # TODO : Set up service
+        href:           https://prowlarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://prowlarr.services.tygo.van.den.hurk.dev
+        description:    A unified web interface for the R-stack services.
+        icon:           prowlarr.svg
+        widget:
+            type:       prowlarr
+            url:        https://prowlarr.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+    - Lidarr:           # TODO : Set up service
+        href:           https://lidarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://lidarr.services.tygo.van.den.hurk.dev
+        description:    Gets music to listen to.
+        icon:           lidarr.svg
+        widget:
+            type:       lidarr
+            url:        https://lidarr.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ STORAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- Storage:
+        
+    - UNRAID:           # TODO : Set up service
+        href:           https://unraid.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://unraid.services.tygo.van.den.hurk.dev
+        description:    My personal UNRAID server.
+        icon:           unraid.svg
+
+    - NextCloud:        # TODO : Set up service
+        href:           https://nextcloud.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://nextcloud.services.tygo.van.den.hurk.dev
+        description:    My personal cloud storage server.
+        icon:           nextcloud.svg
+        widget:
+            type:       nextcloud
+            url:        https://nextcloud.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+    
+    - Photoprism:       # TODO : Set up service
+        href:           https://photoprism.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://photoprism.services.tygo.van.den.hurk.dev
+        description:    My personal photo storage server.
+        icon:           photoprism.svg
+        widget:
+            type:       photoprism
+            url:        https://photoprism.services.tygo.van.den.hurk.dev
+            username:   admin
+            password:   password # TODO : get token
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INFRASTRUCTURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- Infrastructure:
+
+    - Pi-Hole:          # TODO : Set up service
+        href:           https://pi-hole.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://pi-hole.services.tygo.van.den.hurk.dev
+        description:    My personal DNS server. Blocks ads and malicious websites.
+        icon:           pi-hole.svg
+        widget:
+            type:       pihole
+            url:        https://pi-hole.services.tygo.van.den.hurk.dev
+            version:    6
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+    - Authentik:        # TODO : Set up service
+        href:           https://authentik.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://authentik.services.tygo.van.den.hurk.dev
+        description:    an Oauth provider, letting you log in on multiple services with the same password.
+        icon:           authentik.png
+        widget:
+            type:       authentik
+            url:        https://authentik.services.tygo.van.den.hurk.dev
+            key:        {{HOMEPAGE_VAR_AUTHENTIK_KEY}} # TODO : get token
+
+    - Portainer:        # TODO : Set up service
+        href:           https://portainer.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://portainer.services.tygo.van.den.hurk.dev
+        icon:           portainer.png
+        description:    My portainer instance. This is where I control all my docker containers.
+        widget: 
+            type:       portainer
+            url:        https://portainer.services.tygo.van.den.hurk.dev
+            env:        2
+            key:        {{HOMEPAGE_VAR_PORTAINER_KEY}} # TODO : get token
+
+    - Watch Tower:   # TODO : Set up service
+        href:           https://watchtower.services.tygo.van.den.hurk.dev
+        description:    A service that updates containers when a newer version becomes available.
+        siteMonitor:    https://watchtower.services.tygo.van.den.hurk.dev
+        icon:           watchtower.png
+        widget:
+            type:       watchtower
+            url:        https://watchtower.services.tygo.van.den.hurk.dev
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ IOT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- Smart Home:
+
+    - Home Bridge:      # TODO : Set up service
+        href:           https://homebridge.services.tygo.van.den.hurk.dev
+        description:    A simple application that emulates Apple Home Kit for devices that do no support it.
+        siteMonitor:    https://homebridge.services.tygo.van.den.hurk.dev
+        icon:           homebridge.png
+        widget:
+          type:         homebridge
+          url:          https://homebridge.services.tygo.van.den.hurk.dev
+          username:     username
+          password:     password # TODO : get token
+
+    - Home Assistant:   # TODO : Set up service
+        href:           https://homeassistant.services.tygo.van.den.hurk.dev
+        description:    A smart home automation service.
+        siteMonitor:    https://homeassistant.services.tygo.van.den.hurk.dev
+        icon:           home-assistant.png
+        widget:
+            type:       homeassistant
+            url:        https://homeassistant.services.tygo.van.den.hurk.dev
+            key:        {{HOMEPAGE_VAR_HOMEASSISTANT_KEY}} # TODO : get token
+            # custom:
+            #     - state: sensor.total_power
+            #     - state: sensor.total_energy_today
+            #       label: energy today
+            #     - template: "{{ states.switch|selectattr('state','equalto','on')|list|length }}"
+            #       label: switches on
+            #     - state: weather.forecast_home
+            #       label: wind speed
+            #       value: "{attributes.wind_speed} {attributes.wind_speed_unit}"
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ WEBSITES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- Websites:
+
+    - tygo.van.den.hurk.dev:
+        href:         https://tygo.van.den.hurk.dev
+        siteMonitor:  https://tygo.van.den.hurk.dev
+        description:  My personal website.
+        icon:         https://tygo.van.den.hurk.dev/assets/images/me/head-shot.jpg
+
+    - redirects.tygo.van.den.hurk.dev:
+        href:         https://redirects.tygo.van.den.hurk.dev
+        siteMonitor:  https://redirects.tygo.van.den.hurk.dev
+        description:  My personal redirection website.
+        icon:         https://redirects.tygo.van.den.hurk.dev/assets/images/icons/redirect/responsive.svg
+
+    - assets.tygo.van.den.hurk.dev:
+        href:         https://assets.tygo.van.den.hurk.dev
+        siteMonitor:  https://assets.tygo.van.den.hurk.dev
+        description:  My personal web assets storage website.
+        icon:         https://assets.tygo.van.den.hurk.dev/favicon.ico
+
+    - van.den.hurk.dev:
+        href:         https://van.den.hurk.dev
+        siteMonitor:  https://van.den.hurk.dev
+        description:  A website that tells that van.den.hurk.dev domains are for sale.
+        icon:         https://van.den.hurk.dev/icon.svg
+
+    - blog.tygo.van.den.hurk.dev:
+        href:         https://blog.tygo.van.den.hurk.dev
+        siteMonitor:  https://blog.tygo.van.den.hurk.dev
+        description:  My personal blog.
+        icon:         /icons/blog.svg
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PROJECTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- Projects:
+
+    - Game Design 3:
+        href:         https://gamedesign3.school.tygo.van.den.hurk.dev
+        siteMonitor:  https://gamedesign3.school.tygo.van.den.hurk.dev
+        description:  A school project I made when studying at TU/e.
+        icon:         https://gamedesign3.school.tygo.van.den.hurk.dev/pirate-captain.jpeg
+
+    - Kapoetio:
+        href:         https://kapoetio.software.tygo.van.den.hurk.dev
+        siteMonitor:  https://kapoetio.software.tygo.van.den.hurk.dev
+        description:  A game where you can create your own chess boards and pieces.
+        icon:         https://kapoetio.software.tygo.van.den.hurk.dev/assets/icons/applicationIcons/board-game.png
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SERVERS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- Servers:
+
+    - Cloud Server:
+        ping:           cloud.tygo.van.den.hurk.dev
+        description:    My server in the cloud.
+        icon:           /icons/cloud.svg
+        widget:         
+            type:       tailscale
+            deviceid:   deviceID
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+    - CPU Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     cpu
+    - RAM Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     ram
+    - Network Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     network:enp0s25
+
+    - Home NAS server: # TODO : Setup
+        href:           https://unraid.services.tygo.van.den.hurk.dev
+        ping:           unraid.home.tygo.van.den.hurk.dev 
+        description:    My home NAS server.
+        icon:           /icons/home.svg
+        widget:
+            type:       tailscale
+            deviceid:   deviceid
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+    - CPU Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     cpu
+    - RAM Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     ram
+    - Network Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     network:enp0s25
+
+    - Home Cluster Master: # TODO : Setup
+        ping:           master.cluster.home.tygo.van.den.hurk.dev
+        description:    The master of my Kubernetes cluster at home.
+        icon:           /icons/cluster.svg
+        widget:
+            type:       tailscale
+            deviceid:   deviceid
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+    - CPU Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.master.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     cpu
+    - RAM Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.master.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     ram
+    - Network Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.master.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     network:enp0s25
+
+    - Home Cluster worker 0: # TODO : Setup
+        ping:           worker0.cluster.home.tygo.van.den.hurk.dev
+        description:    The first worker of my Kubernetes cluster at home.
+        icon:           /icons/cluster.svg
+        widget:
+            type:       tailscale
+            deviceid:   deviceid
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+    - CPU Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker0.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     cpu
+    - RAM Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker0.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     ram
+    - Network Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker0.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     network:enp0s25
+
+    - Home Cluster worker 1: # TODO : Setup
+        ping:           worker1.cluster.home.tygo.van.den.hurk.dev
+        description:    The second worker of my Kubernetes cluster at home.
+        icon:           /icons/cluster.svg
+        widget:
+            type:       tailscale
+            deviceid:   deviceid
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+    - CPU Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker1.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     cpu
+    - RAM Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker1.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     ram
+    - Network Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker1.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     network:enp0s25
+
+    - Home Cluster worker 2: # TODO : Setup
+        ping:           worker2.cluster.home.tygo.van.den.hurk.dev
+        description:    The third worker of my Kubernetes cluster at home.
+        icon:           /icons/cluster.svg
+        widget:
+            type:       tailscale
+            deviceid:   deviceid
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+    - CPU Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker2.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     cpu
+    - RAM Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker2.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     ram
+    - Network Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker2.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     network:enp0s25
+
+    - Home Cluster worker 3: # TODO : Setup
+        ping:           worker3.cluster.home.tygo.van.den.hurk.dev
+        description:    The forth worker of my Kubernetes cluster at home.
+        icon:           /icons/cluster.svg
+        widget:
+            type:       tailscale
+            deviceid:   deviceid
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+    - CPU Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker3.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     cpu
+    - RAM Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker3.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     ram
+    - Network Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        http://glances.worker3.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     network:enp0s25
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MANAGEMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+# - Management:
+
+# - Monitoring:
+#     - UptimeKuma:
+#         href: https://uptimekuma-prod-1.srv-prod-7.home.clcreative.de
+#         description: uptimekuma-prod-1 on srv-prod-7
+#         icon: uptime-kuma.png
+#         widget:
+#             type: uptimekuma
+#             url: https://uptimekuma-prod-1.srv-prod-7.home.clcreative.de
+#             slug: publicservices
+#     - Prometheus:
+#         href: https://prometheus-prod-1.srv-prod-1.home.clcreative.de
+#         description: prometheus-prod-1 on srv-prod-1
+#         icon: prometheus.png
+#         server: srv-prod-1
+#         container: prometheus-prod-1
+#         widget:
+#             type: prometheus
+#             url: https://prometheus-prod-1.srv-prod-1.home.clcreative.de
+#     - Grafana:
+#         href: https://grafana-prod-1.srv-prod-1.home.clcreative.de
+#         description: grafana-prod-1 on srv-prod-1
+#         icon: grafana.png
+#         server: srv-prod-1
+#         container: grafana-prod-1
+
+# - Automation:
+#     - Kestra:
+#         href: https://kestra-demo-1.srv-prod-1.home.clcreative.de
+#         description: kestra-demo-1 on srv-prod-1
+#         icon: https://kestra-io.gallerycdn.vsassets.io/extensions/kestra-io/kestra/0.0.1/1692285562923/Microsoft.VisualStudio.Services.Icons.Default
+
+#     - Ansible Semaphore:
+#         href: https://ansiblesemaphore-prod-1.srv-prod-1.home.clcreative.de
+#         description: ansiblesemaphore-prod-1 on srv-prod-1
+#         icon: si-ansible-#EE0000
+#     - ArgoCD:
+#         href: https://argocd-prod-1.kube-prod-1.home.clcreative.de
+#         description: argocd-prod-1 on kube-prod-1
+#         icon: si-argo-#EF7B4D
+

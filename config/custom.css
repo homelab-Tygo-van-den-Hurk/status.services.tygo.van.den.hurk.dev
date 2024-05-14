@@ -1,0 +1,13 @@
+div.services-group {
+    margin-top: 1.5em;
+}
+
+ul.grid > li.service > div.mb-2  {
+    height: calc( 100% - 0.5em );
+}
+
+#footer {
+    * {
+        display: none;
+    }
+}
