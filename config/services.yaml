@@ -312,21 +312,21 @@
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            url:        https://glances.cloud.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     cpu
     - RAM Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            url:        https://glances.cloud.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     ram
     - Network Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            url:        https://glances.cloud.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
@@ -343,21 +343,21 @@
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            url:        https://glances.cloud.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     cpu
     - RAM Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            url:        https://glances.cloud.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     ram
     - Network Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.cloud.tygo.van.den.hurk.dev
+            url:        https://glances.cloud.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
@@ -373,21 +373,21 @@
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.master.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.master.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     cpu
     - RAM Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.master.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.master.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     ram
     - Network Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.master.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.master.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
@@ -403,21 +403,21 @@
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker0.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker0.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     cpu
     - RAM Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker0.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker0.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     ram
     - Network Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker0.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker0.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
@@ -433,21 +433,21 @@
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker1.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker1.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     cpu
     - RAM Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker1.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker1.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     ram
     - Network Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker1.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker1.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
@@ -463,21 +463,21 @@
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker2.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker2.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     cpu
     - RAM Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker2.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker2.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     ram
     - Network Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker2.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker2.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
@@ -493,21 +493,21 @@
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker3.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker3.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     cpu
     - RAM Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker3.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker3.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     ram
     - Network Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        http://glances.worker3.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.worker3.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
