@@ -42,7 +42,7 @@ layout:
         icon: /icons/infrastructure.svg
         iconStyle: theme
         style: row
-        columns: 4
+        columns: 5
 
     - Smart Home:
         icon: /icons/smart-home.svg
