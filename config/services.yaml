@@ -1,4 +1,7 @@
----
+# variables:
+#   plex_url: "https://plex.services.tygo.van.den.hurk.dev"
+
+# ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
 
@@ -22,7 +25,7 @@
         widget:
             type:       plex
             url:        https://plex.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey  # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_PLEX}}
 
     - Jellyfin:         # TODO : Set up service
         href:           https://jellyfin.services.tygo.van.den.hurk.dev
@@ -32,7 +35,7 @@
         widget:
             type:       jellyfin
             url:        https://jellyfin.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_JELLYFIN}}
 
     - Audiobook shelf:  # TODO : Set up service
         href:           https://audiobookshelf.services.tygo.van.den.hurk.dev
@@ -42,7 +45,7 @@
         widget:
             type:       audiobookshelf
             url:        https://audiobookshelf.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_AUDIOBOOKSHELF}}
 
     #| Services for requesting Content
     - Jellyseerr:       # TODO : Set up service
@@ -53,7 +56,7 @@
         widget:
             type:       jellyseerr
             url:        https://jellyseerr.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_JELLYSEERR}}
 
     - Overseerr:       # TODO : Set up service
         href:           https://overseerr.services.tygo.van.den.hurk.dev
@@ -63,7 +66,7 @@
         widget:
             type:       overseerr
             url:        https://overseerr.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_OVERSEERR}}
 
     - Ombi:             # TODO : Set up service
         href:           https://ombi.services.tygo.van.den.hurk.dev
@@ -73,7 +76,7 @@
         widget:
             type:       ombi
             url:        https://ombi.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_OMBI}}
 
     #| Services for getting Content
     - Radarr:           # TODO : Set up service
@@ -84,7 +87,7 @@
         widget:
             type:       radarr
             url:        https://radarr.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_RADARR}}
             
     - Sonarr:           # TODO : Set up service
         href:           https://sonarr.services.tygo.van.den.hurk.dev
@@ -94,7 +97,7 @@
         widget:
             type:       sonarr
             url:        https://sonarr.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_SONARR}}
 
     - Readarr:           # TODO : Set up service
         href:           https://readarr.services.tygo.van.den.hurk.dev
@@ -104,7 +107,7 @@
         widget:
             type:       readarr
             url:        https://readarr.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_READARR}}
             
     - Bazarr:           # TODO : Set up service
         href:           https://bazarr.services.tygo.van.den.hurk.dev
@@ -114,7 +117,7 @@
         widget:
             type:       bazarr
             url:        https://bazarr.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_BAZARR}}
             
     - Prowlarr:         # TODO : Set up service
         href:           https://prowlarr.services.tygo.van.den.hurk.dev
@@ -124,7 +127,7 @@
         widget:
             type:       prowlarr
             url:        https://prowlarr.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_PROWLARR}}
 
     - Lidarr:           # TODO : Set up service
         href:           https://lidarr.services.tygo.van.den.hurk.dev
@@ -134,7 +137,7 @@
         widget:
             type:       lidarr
             url:        https://lidarr.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_LIDARR}}
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ STORAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
@@ -154,7 +157,7 @@
         widget:
             type:       nextcloud
             url:        https://nextcloud.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_NEXTCLOUD}}
     
     - Photoprism:       # TODO : Set up service
         href:           https://photoprism.services.tygo.van.den.hurk.dev
@@ -165,11 +168,23 @@
             type:       photoprism
             url:        https://photoprism.services.tygo.van.den.hurk.dev
             username:   admin
-            password:   password # TODO : get token
+            password:   {{HOMEPAGE_VAR_KEY_PHOTOPRISM}}
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INFRASTRUCTURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INFRASTRUCTURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 - Infrastructure:
+
+    - Reverse Proxy (cloud):
+        href:           ssh://ubuntu@cloud.tygo.van.den.hurk.dev
+        siteMonitor:    http://reverse-proxy.cloud.tygo.van.den.hurk.dev:81
+        description:    My personal reverse proxy server in the cloud. This is the public end point of all my services.
+        icon:           nginx-proxy-manager.svg
+        widget:
+          type:         npm
+          url:          http://reverse-proxy.cloud.tygo.van.den.hurk.dev:81
+          username:     {{HOMEPAGE_VAR_USER_REVERSEPROXY}}
+          password:     {{HOMEPAGE_VAR_PASS_REVERSEPROXY}}
+          fields:       [ "enabled", "disabled" ]
 
     - Pi-Hole:          # TODO : Set up service
         href:           https://pi-hole.services.tygo.van.den.hurk.dev
@@ -180,7 +195,7 @@
             type:       pihole
             url:        https://pi-hole.services.tygo.van.den.hurk.dev
             version:    6
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_PIHOLE}}
 
     - Authentik:        # TODO : Set up service
         href:           https://authentik.services.tygo.van.den.hurk.dev
@@ -190,7 +205,7 @@
         widget:
             type:       authentik
             url:        https://authentik.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_AUTHENTIK_KEY}} # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_AUTHENTIK}}
 
     - Portainer:        # TODO : Set up service
         href:           https://portainer.services.tygo.van.den.hurk.dev
@@ -201,7 +216,7 @@
             type:       portainer
             url:        https://portainer.services.tygo.van.den.hurk.dev
             env:        2
-            key:        {{HOMEPAGE_VAR_PORTAINER_KEY}} # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_PORTAINER}}
 
     - Watch Tower:   # TODO : Set up service
         href:           https://watchtower.services.tygo.van.den.hurk.dev
@@ -211,7 +226,7 @@
         widget:
             type:       watchtower
             url:        https://watchtower.services.tygo.van.den.hurk.dev
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_WATCHTOWER}}
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ IOT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
@@ -225,8 +240,8 @@
         widget:
           type:         homebridge
           url:          https://homebridge.services.tygo.van.den.hurk.dev
-          username:     username
-          password:     password # TODO : get token
+          username:     {{HOMEPAGE_VAR_USER_HOMEBRIDGE}}
+          password:     {{HOMEPAGE_VAR_PASS_HOMEBRIDGE}}
 
     - Home Assistant:   # TODO : Set up service
         href:           https://homeassistant.services.tygo.van.den.hurk.dev
@@ -236,12 +251,12 @@
         widget:
             type:       homeassistant
             url:        https://homeassistant.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_HOMEASSISTANT_KEY}} # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_HOMEASSISTANT}}
             # custom:
             #     - state: sensor.total_power
             #     - state: sensor.total_energy_today
             #       label: energy today
-            #     - template: "{{ states.switch|selectattr('state','equalto','on')|list|length }}"
+            #     - template: "{{states.switch|selectattr('state','equalto','on')|list|length}}"
             #       label: switches on
             #     - state: weather.forecast_home
             #       label: wind speed
@@ -308,7 +323,7 @@
         widget:         
             type:       tailscale
             deviceid:   deviceID
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            key:        {{HOMEPAGE_VAR_KEY_TAILSCALE}} 
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
@@ -332,8 +347,8 @@
             metric:     network:enp0s25
 
     - Home NAS server: # TODO : Setup
-        href:           https://unraid.services.tygo.van.den.hurk.dev
-        ping:           unraid.home.tygo.van.den.hurk.dev 
+        href:           https://nas.home.tygo.van.den.hurk.dev
+        ping:           nas.home.tygo.van.den.hurk.dev 
         description:    My home NAS server.
         icon:           /icons/home.svg
         widget:
@@ -343,51 +358,21 @@
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        https://glances.cloud.tygo.van.den.hurk.dev
+            url:        https://glances.nas.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     cpu
     - RAM Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        https://glances.cloud.tygo.van.den.hurk.dev
+            url:        https://glances.nas.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     ram
     - Network Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        https://glances.cloud.tygo.van.den.hurk.dev
-            username:   user # optional if auth enabled in Glances
-            password:   pass # optional if auth enabled in Glances
-            metric:     network:enp0s25
-
-    - Home Cluster Master: # TODO : Setup
-        ping:           master.cluster.home.tygo.van.den.hurk.dev
-        description:    The master of my Kubernetes cluster at home.
-        icon:           /icons/cluster.svg
-        widget:
-            type:       tailscale
-            deviceid:   deviceid
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
-    - CPU Usage:
-        widget:         # TODO : Set up service
-            type:       glances
-            url:        https://glances.master.cluster.home.tygo.van.den.hurk.dev
-            username:   user # optional if auth enabled in Glances
-            password:   pass # optional if auth enabled in Glances
-            metric:     cpu
-    - RAM Usage:
-        widget:         # TODO : Set up service
-            type:       glances
-            url:        https://glances.master.cluster.home.tygo.van.den.hurk.dev
-            username:   user # optional if auth enabled in Glances
-            password:   pass # optional if auth enabled in Glances
-            metric:     ram
-    - Network Usage:
-        widget:         # TODO : Set up service
-            type:       glances
-            url:        https://glances.master.cluster.home.tygo.van.den.hurk.dev
+            url:        https://glances.nas.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
@@ -508,6 +493,36 @@
         widget:         # TODO : Set up service
             type:       glances
             url:        https://glances.worker3.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     network:enp0s25
+
+    - Home Cluster worker 4: # TODO : Setup
+        ping:           worker4.cluster.home.tygo.van.den.hurk.dev
+        description:    The forth worker of my Kubernetes cluster at home.
+        icon:           /icons/cluster.svg
+        widget:
+            type:       tailscale
+            deviceid:   deviceid
+            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+    - CPU Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        https://glances.worker4.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     cpu
+    - RAM Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        https://glances.worker4.cluster.home.tygo.van.den.hurk.dev
+            username:   user # optional if auth enabled in Glances
+            password:   pass # optional if auth enabled in Glances
+            metric:     ram
+    - Network Usage:
+        widget:         # TODO : Set up service
+            type:       glances
+            url:        https://glances.worker4.cluster.home.tygo.van.den.hurk.dev
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
