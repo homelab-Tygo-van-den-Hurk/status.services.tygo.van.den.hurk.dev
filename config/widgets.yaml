@@ -5,6 +5,9 @@
 - greeting:
     text_size: xl
     text: "Hey there, welcome! This is currently still in development, so you might see some \"offline\" services. Please don't worry about that, it will be fixed shortly."
+- greeting:
+    text_size: xs
+    text: {{HOMEPAGE_VAR_TEST}}
 
 # - resources:
 #     cpu: true
