@@ -1,8 +1,8 @@
-version: "3.3"
+---
 
 services:
   homepage:
-    container_name: homepage.tygo.van.den.hurk.dev
+    container_name: status.services.tygo.van.den.hurk.dev
     image: ghcr.io/gethomepage/homepage:latest
     restart: unless-stopped
     networks:
@@ -18,7 +18,11 @@ services:
     environment:
       PUID: $PUID
       PGID: $PGID
-      
+    env_file:
+      - path: ./.env
+        required: true
+    tty: true
+
 networks:
   proxymesh:
     external: true
