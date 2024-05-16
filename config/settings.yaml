@@ -36,13 +36,13 @@ layout:
         icon: /icons/storage.svg
         iconStyle: theme
         style: row
-        columns: 3
+        columns: 4
 
     - Infrastructure:
         icon: /icons/infrastructure.svg
         iconStyle: theme
         style: row
-        columns: 5
+        columns: 3
 
     - Smart Home:
         icon: /icons/smart-home.svg

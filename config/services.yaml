@@ -143,6 +143,12 @@
 
 - Storage:
         
+    - Duplicati:           # TODO : Set up service
+        href:           https://duplicati.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://duplicati.services.tygo.van.den.hurk.dev
+        description:    A backup solution for backing up files to a remote server
+        icon:           duplicati.svg
+
     - UNRAID:           # TODO : Set up service
         href:           https://unraid.services.tygo.van.den.hurk.dev
         siteMonitor:    https://unraid.services.tygo.van.den.hurk.dev
@@ -170,6 +176,8 @@
             username:   admin
             password:   {{HOMEPAGE_VAR_KEY_PHOTOPRISM}}
 
+
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INFRASTRUCTURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 - Infrastructure:
@@ -185,6 +193,18 @@
           username:     {{HOMEPAGE_VAR_USER_REVERSEPROXY}}
           password:     {{HOMEPAGE_VAR_PASS_REVERSEPROXY}}
           fields:       [ "enabled", "disabled" ]
+
+    - Uptime Kuma (cloud):
+        href:           https://uptime-kuma.services.tygo.van.den.hurk.dev
+        siteMonitor:    http://uptime-kuma.services.tygo.van.den.hurk.dev:3001
+        # ping:           uptime-kuma.services.tygo.van.den.hurk.dev
+        description:    A status monitor for services. Notifies me when a services goes down.
+        icon:           uptime-kuma.svg
+        widget:
+          type:         uptimekuma
+          url:          http://uptime-kuma.services.tygo.van.den.hurk.dev:3001
+          slug:         {{HOMEPAGE_VAR_SLUG_UPTIMEKUMA}}
+          fields:       ["up", "down", "uptime", "incident"]
 
     - Pi-Hole:          # TODO : Set up service
         href:           https://pi-hole.services.tygo.van.den.hurk.dev
