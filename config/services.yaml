@@ -25,7 +25,7 @@
         widget:
             type:       plex
             url:        https://plex.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_PLEX}}
+            key:        {{HOMEPAGE_VAR_APIKEY_PLEX}}
 
     - Jellyfin:         # TODO : Set up service
         href:           https://jellyfin.services.tygo.van.den.hurk.dev
@@ -35,7 +35,7 @@
         widget:
             type:       jellyfin
             url:        https://jellyfin.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_JELLYFIN}}
+            key:        {{HOMEPAGE_VAR_APIKEY_JELLYFIN}}
 
     - Audiobook shelf:  # TODO : Set up service
         href:           https://audiobookshelf.services.tygo.van.den.hurk.dev
@@ -45,7 +45,7 @@
         widget:
             type:       audiobookshelf
             url:        https://audiobookshelf.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_AUDIOBOOKSHELF}}
+            key:        {{HOMEPAGE_VAR_APIKEY_AUDIOBOOKSHELF}}
 
     #| Services for requesting Content
     - Jellyseerr:       # TODO : Set up service
@@ -56,7 +56,7 @@
         widget:
             type:       jellyseerr
             url:        https://jellyseerr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_JELLYSEERR}}
+            key:        {{HOMEPAGE_VAR_APIKEY_JELLYSEERR}}
 
     - Overseerr:       # TODO : Set up service
         href:           https://overseerr.services.tygo.van.den.hurk.dev
@@ -66,7 +66,7 @@
         widget:
             type:       overseerr
             url:        https://overseerr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_OVERSEERR}}
+            key:        {{HOMEPAGE_VAR_APIKEY_OVERSEERR}}
 
     - Ombi:             # TODO : Set up service
         href:           https://ombi.services.tygo.van.den.hurk.dev
@@ -76,7 +76,7 @@
         widget:
             type:       ombi
             url:        https://ombi.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_OMBI}}
+            key:        {{HOMEPAGE_VAR_APIKEY_OMBI}}
 
     #| Services for getting Content
     - Radarr:           # TODO : Set up service
@@ -87,7 +87,7 @@
         widget:
             type:       radarr
             url:        https://radarr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_RADARR}}
+            key:        {{HOMEPAGE_VAR_APIKEY_RADARR}}
             
     - Sonarr:           # TODO : Set up service
         href:           https://sonarr.services.tygo.van.den.hurk.dev
@@ -97,7 +97,7 @@
         widget:
             type:       sonarr
             url:        https://sonarr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_SONARR}}
+            key:        {{HOMEPAGE_VAR_APIKEY_SONARR}}
 
     - Readarr:           # TODO : Set up service
         href:           https://readarr.services.tygo.van.den.hurk.dev
@@ -107,7 +107,7 @@
         widget:
             type:       readarr
             url:        https://readarr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_READARR}}
+            key:        {{HOMEPAGE_VAR_APIKEY_READARR}}
             
     - Bazarr:           # TODO : Set up service
         href:           https://bazarr.services.tygo.van.den.hurk.dev
@@ -117,7 +117,7 @@
         widget:
             type:       bazarr
             url:        https://bazarr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_BAZARR}}
+            key:        {{HOMEPAGE_VAR_APIKEY_BAZARR}}
             
     - Prowlarr:         # TODO : Set up service
         href:           https://prowlarr.services.tygo.van.den.hurk.dev
@@ -127,7 +127,7 @@
         widget:
             type:       prowlarr
             url:        https://prowlarr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_PROWLARR}}
+            key:        {{HOMEPAGE_VAR_APIKEY_PROWLARR}}
 
     - Lidarr:           # TODO : Set up service
         href:           https://lidarr.services.tygo.van.den.hurk.dev
@@ -137,7 +137,35 @@
         widget:
             type:       lidarr
             url:        https://lidarr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_LIDARR}}
+            key:        {{HOMEPAGE_VAR_APIKEY_LIDARR}}
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SERVICES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- Services:
+    
+    - OpenWeb UI:       
+        href:           https://ai-chat.services.tygo.van.den.hurk.dev/
+        siteMonitor:    http://openweb-ui_ai-chat_services_tygo_van_den_hurk_dev:8080
+        description:    An AI chat page, where you can use any model without rate limits.
+        icon:           /icons/openweb-ui.svg
+
+    - Ollama:       
+        href:           https://ai-chat.services.tygo.van.den.hurk.dev/
+        siteMonitor:    http://ollama_ai-chat_services_tygo_van_den_hurk_dev:11434
+        description:    An AI engine that can run any AI model.
+        icon:           /icons/ollama.svg
+        widget:
+          type: customapi
+          url: http://ollama_ai-chat_services_tygo_van_den_hurk_dev:11434/api/tags
+          refreshInterval: 10000
+          method: GET
+          mappings:
+            - field: models
+              label: Models
+              remap:
+              - any: true # will map all other values
+                to: count(totals)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ STORAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
@@ -163,7 +191,7 @@
         widget:
             type:       nextcloud
             url:        https://nextcloud.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_NEXTCLOUD}}
+            key:        {{HOMEPAGE_VAR_APIKEY_NEXTCLOUD}}
     
     - Photoprism:       # TODO : Set up service
         href:           https://photoprism.services.tygo.van.den.hurk.dev
@@ -174,7 +202,7 @@
             type:       photoprism
             url:        https://photoprism.services.tygo.van.den.hurk.dev
             username:   admin
-            password:   {{HOMEPAGE_VAR_KEY_PHOTOPRISM}}
+            password:   {{HOMEPAGE_VAR_APIKEY_PHOTOPRISM}}
 
 
 
@@ -215,7 +243,7 @@
             type:       pihole
             url:        https://pi-hole.services.tygo.van.den.hurk.dev
             version:    6
-            key:        {{HOMEPAGE_VAR_KEY_PIHOLE}}
+            key:        {{HOMEPAGE_VAR_APIKEY_PIHOLE}}
 
     - Authentik:        # TODO : Set up service
         href:           https://authentik.services.tygo.van.den.hurk.dev
@@ -225,7 +253,7 @@
         widget:
             type:       authentik
             url:        https://authentik.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_AUTHENTIK}}
+            key:        {{HOMEPAGE_VAR_APIKEY_AUTHENTIK}}
 
     - Portainer:        # TODO : Set up service
         href:           https://portainer.services.tygo.van.den.hurk.dev
@@ -236,7 +264,7 @@
             type:       portainer
             url:        https://portainer.services.tygo.van.den.hurk.dev
             env:        2
-            key:        {{HOMEPAGE_VAR_KEY_PORTAINER}}
+            key:        {{HOMEPAGE_VAR_APIKEY_PORTAINER}}
 
     - Watch Tower:   # TODO : Set up service
         href:           https://watchtower.services.tygo.van.den.hurk.dev
@@ -246,7 +274,7 @@
         widget:
             type:       watchtower
             url:        https://watchtower.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_WATCHTOWER}}
+            key:        {{HOMEPAGE_VAR_APIKEY_WATCHTOWER}}
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ IOT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
@@ -271,7 +299,7 @@
         widget:
             type:       homeassistant
             url:        https://homeassistant.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_KEY_HOMEASSISTANT}}
+            key:        {{HOMEPAGE_VAR_APIKEY_HOMEASSISTANT}}
             # custom:
             #     - state: sensor.total_power
             #     - state: sensor.total_energy_today
@@ -342,8 +370,8 @@
         icon:           /icons/cloud.svg
         widget:         
             type:       tailscale
-            deviceid:   deviceID
-            key:        {{HOMEPAGE_VAR_KEY_TAILSCALE}} 
+            deviceid:   {{HOMEPAGE_VAR_TAILSCALE_CLOUDSERVER_DEVICEID}}
+            key:        {{HOMEPAGE_VAR_OAUTHKEY_TAILSCALE}} 
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances

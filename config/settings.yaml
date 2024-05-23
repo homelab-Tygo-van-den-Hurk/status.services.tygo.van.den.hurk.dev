@@ -32,6 +32,12 @@ layout:
         style: row
         columns: 3
     
+    - Services:
+        icon: /icons/ai.svg
+        iconStyle: theme
+        style: row
+        columns: 2
+
     - Storage:
         icon: /icons/storage.svg
         iconStyle: theme
@@ -67,7 +73,3 @@ layout:
         iconStyle: theme
         style: row
         columns: 4
-        
-# providers:
-#   openweathermap: openweathermapapikey
-#   weatherapi:     weatherapiapikey
