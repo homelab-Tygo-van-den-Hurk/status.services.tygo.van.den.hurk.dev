@@ -144,6 +144,12 @@
 
 - Services:
     
+    - Documentation:       
+        href:           https://documentation.services.tygo.van.den.hurk.dev
+        siteMonitor:    http://documentation.services.tygo.van.den.hurk.dev
+        description:    A documentation site where I write about all my services, and how you can use them.
+        icon:           /icons/documentation.svg
+
     - OpenWeb UI:       
         href:           https://ai-chat.services.tygo.van.den.hurk.dev/
         siteMonitor:    http://openweb-ui_ai-chat_services_tygo_van_den_hurk_dev:8080
