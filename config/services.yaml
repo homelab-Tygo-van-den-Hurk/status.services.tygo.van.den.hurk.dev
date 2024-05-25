@@ -184,8 +184,8 @@
         icon:           duplicati.svg
 
     - UNRAID:           # TODO : Set up service
-        href:           https://unraid.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://unraid.services.tygo.van.den.hurk.dev
+        href:           https://nas.home.tygo.van.den.hurk.dev
+        siteMonitor:    https://nas.home.tygo.van.den.hurk.dev
         description:    My personal UNRAID server.
         icon:           unraid.svg
 
@@ -402,7 +402,7 @@
 
     - Home NAS server: # TODO : Setup
         href:           https://nas.home.tygo.van.den.hurk.dev
-        ping:           nas.home.tygo.van.den.hurk.dev 
+        siteMonitor:    https://nas.home.tygo.van.den.hurk.dev
         description:    My home NAS server.
         icon:           /icons/home.svg
         widget:
@@ -584,16 +584,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MANAGEMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 # - Management:
-
-# - Monitoring:
-#     - UptimeKuma:
-#         href: https://uptimekuma-prod-1.srv-prod-7.home.clcreative.de
-#         description: uptimekuma-prod-1 on srv-prod-7
-#         icon: uptime-kuma.png
-#         widget:
-#             type: uptimekuma
-#             url: https://uptimekuma-prod-1.srv-prod-7.home.clcreative.de
-#             slug: publicservices
+#
 #     - Prometheus:
 #         href: https://prometheus-prod-1.srv-prod-1.home.clcreative.de
 #         description: prometheus-prod-1 on srv-prod-1
@@ -624,4 +615,4 @@
 #         href: https://argocd-prod-1.kube-prod-1.home.clcreative.de
 #         description: argocd-prod-1 on kube-prod-1
 #         icon: si-argo-#EF7B4D
-
+#
