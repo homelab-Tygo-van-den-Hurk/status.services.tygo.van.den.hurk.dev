@@ -142,14 +142,8 @@
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SERVICES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-- Services:
+- AI-Services:
     
-    - Documentation:       
-        href:           https://documentation.services.tygo.van.den.hurk.dev
-        siteMonitor:    http://documentation.services.tygo.van.den.hurk.dev
-        description:    A documentation site where I write about all my services, and how you can use them.
-        icon:           /icons/documentation.svg
-
     - OpenWeb UI:       
         href:           https://ai-chat.services.tygo.van.den.hurk.dev/
         siteMonitor:    http://openweb-ui_ai-chat_services_tygo_van_den_hurk_dev:8080
@@ -218,15 +212,15 @@
 
     - Reverse Proxy (cloud):
         href:           ssh://ubuntu@cloud.tygo.van.den.hurk.dev
-        siteMonitor:    http://reverse-proxy.cloud.tygo.van.den.hurk.dev:81
+        siteMonitor:    http://tailscale_reverse-proxy_cloud_tygo_van_den_hurk_dev:81
         description:    My personal reverse proxy server in the cloud. This is the public end point of all my services.
         icon:           nginx-proxy-manager.svg
         widget:
-          type:         npm
-          url:          http://reverse-proxy.cloud.tygo.van.den.hurk.dev:81
-          username:     {{HOMEPAGE_VAR_USER_REVERSEPROXY}}
-          password:     {{HOMEPAGE_VAR_PASS_REVERSEPROXY}}
-          fields:       [ "enabled", "disabled" ]
+            type:         npm
+            url:          http://tailscale_reverse-proxy_cloud_tygo_van_den_hurk_dev:81
+            username:     {{HOMEPAGE_VAR_USER_REVERSEPROXY}}
+            password:     {{HOMEPAGE_VAR_PASS_REVERSEPROXY}}
+            fields:       [ "enabled", "disabled" ]
 
     - Uptime Kuma (cloud):
         href:           https://uptime-kuma.services.tygo.van.den.hurk.dev
@@ -235,11 +229,11 @@
         description:    A status monitor for services. Notifies me when a services goes down.
         icon:           uptime-kuma.svg
         widget:
-          type:         uptimekuma
-          url:          http://uptime-kuma.services.tygo.van.den.hurk.dev:3001
-          slug:         {{HOMEPAGE_VAR_SLUG_UPTIMEKUMA}}
-          fields:       ["up", "down", "uptime", "incident"]
-
+            type:       uptimekuma
+            url:        http://uptime-kuma.services.tygo.van.den.hurk.dev:3001
+            slug:       {{HOMEPAGE_VAR_SLUG_UPTIMEKUMA}}
+            fields:     ["up", "down", "uptime", "incident"]
+    
     - Pi-Hole:          # TODO : Set up service
         href:           https://pi-hole.services.tygo.van.den.hurk.dev
         siteMonitor:    https://pi-hole.services.tygo.van.den.hurk.dev
@@ -271,6 +265,7 @@
             url:        https://portainer.services.tygo.van.den.hurk.dev
             env:        2
             key:        {{HOMEPAGE_VAR_APIKEY_PORTAINER}}
+            fields:     [ "running", "stopped" ]
 
     - Watch Tower:   # TODO : Set up service
         href:           https://watchtower.services.tygo.van.den.hurk.dev
@@ -616,3 +611,12 @@
 #         description: argocd-prod-1 on kube-prod-1
 #         icon: si-argo-#EF7B4D
 #
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+- Documentation:       
+
+    - Documentation Services:       
+        href:           https://documentation.services.tygo.van.den.hurk.dev
+        siteMonitor:    http://documentation.services.tygo.van.den.hurk.dev
+        description:    A documentation site where I write about all my services, and how you can use them.
+        icon:           /icons/documentation.svg

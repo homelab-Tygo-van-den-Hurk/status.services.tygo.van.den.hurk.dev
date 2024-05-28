@@ -3,7 +3,7 @@
 # https://gethomepage.dev/latest/configs/settings
 
 title:          Homepage - Tygo van den Hurk
-favicon:        https://tygo.van.den.hurk.dev/favicon.ico
+favicon:        images/favicon.ico
 
 headerStyle:    clean # boxed
 target:         _self
@@ -32,7 +32,7 @@ layout:
         style: row
         columns: 3
     
-    - Services:
+    - AI-Services:
         icon: /icons/ai.svg
         iconStyle: theme
         style: row
@@ -63,7 +63,7 @@ layout:
         columns: 5
     
     - Projects:
-        icon: /icons/server.svg # TODO : change to a different icon
+        icon: /icons/blueprint.svg
         iconStyle: theme
         style: row
         columns: 2
