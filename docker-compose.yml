@@ -7,8 +7,6 @@ services:
     restart: unless-stopped
     networks:
       - 'proxymesh'
-    ports:
-      - 3000:3000
     volumes:
       - ./config:/app/config
       - ./images:/app/public/images
