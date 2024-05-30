@@ -1,8 +1,9 @@
 ---
 
 services:
+
   homepage:
-    container_name: status.services.tygo.van.den.hurk.dev
+    container_name: homepage
     image: ghcr.io/gethomepage/homepage:latest
     restart: unless-stopped
     networks:
