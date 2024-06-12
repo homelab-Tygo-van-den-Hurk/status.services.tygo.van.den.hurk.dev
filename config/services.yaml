@@ -178,8 +178,8 @@
         icon:           duplicati.svg
 
     - UNRAID:           # TODO : Set up service
-        href:           https://nas.home.tygo.van.den.hurk.dev
-        siteMonitor:    https://nas.home.tygo.van.den.hurk.dev
+        href:           http://tygos-nasserver.tail9fcea.ts.net
+        siteMonitor:    http://tygos-nasserver.tail9fcea.ts.net
         description:    My personal UNRAID server.
         icon:           unraid.svg
 
@@ -212,25 +212,25 @@
 
     - Reverse Proxy (cloud):
         href:           ssh://ubuntu@cloud.tygo.van.den.hurk.dev
-        siteMonitor:    http://tailscale_reverse-proxy_cloud_tygo_van_den_hurk_dev:81
+        siteMonitor:    http://cloud-reverse-proxy:81
         description:    My personal reverse proxy server in the cloud. This is the public end point of all my services.
         icon:           nginx-proxy-manager.svg
         widget:
             type:         npm
-            url:          http://tailscale_reverse-proxy_cloud_tygo_van_den_hurk_dev:81
+            url:          http://cloud-reverse-proxy:81
             username:     {{HOMEPAGE_VAR_USER_REVERSEPROXY}}
             password:     {{HOMEPAGE_VAR_PASS_REVERSEPROXY}}
             fields:       [ "enabled", "disabled" ]
 
     - Uptime Kuma (cloud):
         href:           https://uptime-kuma.services.tygo.van.den.hurk.dev
-        siteMonitor:    http://uptime-kuma.services.tygo.van.den.hurk.dev:3001
+        siteMonitor:    https://uptime-kuma.services.tygo.van.den.hurk.dev
         # ping:           uptime-kuma.services.tygo.van.den.hurk.dev
         description:    A status monitor for services. Notifies me when a services goes down.
         icon:           uptime-kuma.svg
         widget:
             type:       uptimekuma
-            url:        http://uptime-kuma.services.tygo.van.den.hurk.dev:3001
+            url:        http://uptime-kuma:3001
             slug:       {{HOMEPAGE_VAR_SLUG_UPTIMEKUMA}}
             fields:     ["up", "down", "uptime", "incident"]
     
@@ -396,32 +396,32 @@
             metric:     network:enp0s25
 
     - Home NAS server: # TODO : Setup
-        href:           https://nas.home.tygo.van.den.hurk.dev
-        siteMonitor:    https://nas.home.tygo.van.den.hurk.dev
+        href:           https://tygos-nasserver.tail9fcea.ts.net
+        ping:           tygos-nasserver.tail9fcea.ts.net
         description:    My home NAS server.
         icon:           /icons/home.svg
         widget:
             type:       tailscale
-            deviceid:   deviceid
-            key:        apiKeyApiKeyApiKeyApiKeyApiKey # TODO : get token
+            deviceid:   {{HOMEPAGE_VAR_TAILSCALE_CLOUDSERVER_DEVICEID}} # TODO : change this, also, is this a secret?
+            key:        {{HOMEPAGE_VAR_OAUTHKEY_TAILSCALE}} 
     - CPU Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        https://glances.nas.home.tygo.van.den.hurk.dev
+            # url:        https://tygos-nasserver.tail9fcea.ts.net
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     cpu
     - RAM Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        https://glances.nas.home.tygo.van.den.hurk.dev
+            # url:        https://tygos-nasserver.tail9fcea.ts.net
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     ram
     - Network Usage:
         widget:         # TODO : Set up service
             type:       glances
-            url:        https://glances.nas.home.tygo.van.den.hurk.dev
+            # url:        https://tygos-nasserver.tail9fcea.ts.net
             username:   user # optional if auth enabled in Glances
             password:   pass # optional if auth enabled in Glances
             metric:     network:enp0s25
