@@ -174,7 +174,30 @@
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ STORAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-- Storage Services:
+- Photo Storage Services: #| Photo Storage Applications
+
+    - Photoprism:       # TODO : Set up service
+        href:           https://photoprism.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://photoprism.services.tygo.van.den.hurk.dev
+        description:    My personal photo storage server.
+        icon:           photoprism.svg
+        widget:
+            type:       photoprism
+            url:        https://photoprism.services.tygo.van.den.hurk.dev
+            username:   admin
+            password:   {{HOMEPAGE_VAR_APIKEY_PHOTOPRISM}}
+
+    - Immich:           # TODO : Set up service
+        href:           https://immich.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://immich.services.tygo.van.den.hurk.dev
+        description:    Store your photo's securely, as a backup.
+        icon:           immich.svg
+        widget:
+            type:       immich
+            url:        https://immich.services.tygo.van.den.hurk.dev
+            key:        {{HOMEPAGE_VAR_APIKEY_IMMICH}}
+
+- General Storage Services: #| General Storage applications
         
     - Duplicati:        # TODO : Set up service
         href:           https://duplicati.services.tygo.van.den.hurk.dev
@@ -197,27 +220,6 @@
             type:       nextcloud
             url:        https://nextcloud.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_NEXTCLOUD}}
-    
-    - Photoprism:       # TODO : Set up service
-        href:           https://photoprism.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://photoprism.services.tygo.van.den.hurk.dev
-        description:    My personal photo storage server.
-        icon:           photoprism.svg
-        widget:
-            type:       photoprism
-            url:        https://photoprism.services.tygo.van.den.hurk.dev
-            username:   admin
-            password:   {{HOMEPAGE_VAR_APIKEY_PHOTOPRISM}}
-
-    - Immich:           # TODO : Set up service
-        href:           https://immich.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://immich.services.tygo.van.den.hurk.dev
-        description:    Store your photo's securely, as a backup.
-        icon:           immich.svg
-        widget:
-            type:       immich
-            url:        https://immich.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_APIKEY_IMMICH}}
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ STORAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 

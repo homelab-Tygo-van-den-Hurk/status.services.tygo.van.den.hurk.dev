@@ -50,11 +50,17 @@ layout:
         style: row
         columns: 2
 
-    - Storage Services:
+    - Photo Storage Services:
         icon: /icons/storage.svg
         iconStyle: theme
         style: row
-        columns: 4
+        columns: 2
+
+    - General Storage Services:
+        icon: /icons/storage.svg
+        iconStyle: theme
+        style: row
+        columns: 3
 
     - Other Services:
         icon: #/icons/entertainment.svg
