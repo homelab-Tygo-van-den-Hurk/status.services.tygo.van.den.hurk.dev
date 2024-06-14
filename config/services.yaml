@@ -36,7 +36,12 @@
             type:       jellyfin
             url:        https://jellyfin.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_JELLYFIN}}
-
+            enableBlocks: true # optional, defaults to false
+            enableNowPlaying: false # optional, defaults to true
+            # enableUser: true # optional, defaults to false
+            # showEpisodeNumber: true # optional, defaults to false
+            # expandOneStreamToTwoRows: false # optional, defaults to true
+            
     - Audiobook shelf:  # TODO : Set up service
         href:           https://audiobookshelf.services.tygo.van.den.hurk.dev
         siteMonitor:    https://audiobookshelf.services.tygo.van.den.hurk.dev
@@ -203,8 +208,6 @@
             url:        https://photoprism.services.tygo.van.den.hurk.dev
             username:   admin
             password:   {{HOMEPAGE_VAR_APIKEY_PHOTOPRISM}}
-
-
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INFRASTRUCTURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
