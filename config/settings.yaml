@@ -26,7 +26,19 @@ background:
 #   hideVisitURL:           false # true
 
 layout:
-    - Entertainment:
+    - Entertainment (Consumption):
+        icon: /icons/entertainment.svg
+        iconStyle: theme
+        style: row
+        columns: 3
+    
+    - Entertainment (Requests):
+        icon: /icons/entertainment.svg
+        iconStyle: theme
+        style: row
+        columns: 3
+    
+    - Entertainment (Production):
         icon: /icons/entertainment.svg
         iconStyle: theme
         style: row
@@ -38,11 +50,17 @@ layout:
         style: row
         columns: 2
 
-    - Storage:
+    - Storage Services:
         icon: /icons/storage.svg
         iconStyle: theme
         style: row
         columns: 4
+
+    - Other Services:
+        icon: #/icons/entertainment.svg
+        iconStyle: theme
+        style: row
+        columns: 1
 
     - Infrastructure:
         icon: /icons/infrastructure.svg

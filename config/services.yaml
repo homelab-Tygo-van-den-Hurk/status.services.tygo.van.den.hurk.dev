@@ -14,23 +14,12 @@
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ENTERTAINMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-- Entertainment:
-    
-    #| Services for consuming Content
-    - Plex:             # TODO : Set up service
-        href:           https://plex.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://plex.services.tygo.van.den.hurk.dev
-        description:    Watch movies and TV show's using Plex.
-        icon:           plex.svg
-        widget:
-            type:       plex
-            url:        https://plex.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_APIKEY_PLEX}}
+- Entertainment (Consumption): #| Services for consuming Content
 
-    - Jellyfin:         # TODO : Set up service
+    - Jellyfin:
         href:           https://jellyfin.services.tygo.van.den.hurk.dev
         siteMonitor:    https://jellyfin.services.tygo.van.den.hurk.dev
-        description:    Watch movies and shows using Jellyfin.
+        description:    Watch movies,or shows, play your favorite music, or throw yourself into your best book using Jellyfin.
         icon:           jellyfin.svg
         widget:
             type:       jellyfin
@@ -42,6 +31,16 @@
             # showEpisodeNumber: true # optional, defaults to false
             # expandOneStreamToTwoRows: false # optional, defaults to true
             
+    - Plex:             # TODO : Set up service
+        href:           https://plex.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://plex.services.tygo.van.den.hurk.dev
+        description:    Watch movies and TV show's using Plex.
+        icon:           plex.svg
+        widget:
+            type:       plex
+            url:        https://plex.services.tygo.van.den.hurk.dev
+            key:        {{HOMEPAGE_VAR_APIKEY_PLEX}}
+
     - Audiobook shelf:  # TODO : Set up service
         href:           https://audiobookshelf.services.tygo.van.den.hurk.dev
         siteMonitor:    https://audiobookshelf.services.tygo.van.den.hurk.dev
@@ -52,7 +51,8 @@
             url:        https://audiobookshelf.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_AUDIOBOOKSHELF}}
 
-    #| Services for requesting Content
+- Entertainment (Requests): #| Services for requesting Content
+
     - Jellyseerr:       # TODO : Set up service
         href:           https://jellyseerr.services.tygo.van.den.hurk.dev
         siteMonitor:    https://jellyseerr.services.tygo.van.den.hurk.dev
@@ -83,7 +83,8 @@
             url:        https://ombi.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_OMBI}}
 
-    #| Services for getting Content
+- Entertainment (Production): #| Services for getting Content
+
     - Radarr:           # TODO : Set up service
         href:           https://radarr.services.tygo.van.den.hurk.dev
         siteMonitor:    https://radarr.services.tygo.van.den.hurk.dev
@@ -144,7 +145,6 @@
             url:        https://lidarr.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_LIDARR}}
 
-
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SERVICES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 - AI-Services:
@@ -174,15 +174,15 @@
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ STORAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-- Storage:
+- Storage Services:
         
-    - Duplicati:           # TODO : Set up service
+    - Duplicati:        # TODO : Set up service
         href:           https://duplicati.services.tygo.van.den.hurk.dev
         siteMonitor:    https://duplicati.services.tygo.van.den.hurk.dev
         description:    A backup solution for backing up files to a remote server
         icon:           duplicati.svg
 
-    - UNRAID:           # TODO : Set up service
+    - UNRAID:
         href:           http://tygos-nasserver.tail9fcea.ts.net
         siteMonitor:    http://tygos-nasserver.tail9fcea.ts.net
         description:    My personal UNRAID server.
@@ -208,6 +208,30 @@
             url:        https://photoprism.services.tygo.van.den.hurk.dev
             username:   admin
             password:   {{HOMEPAGE_VAR_APIKEY_PHOTOPRISM}}
+
+    - Immich:           # TODO : Set up service
+        href:           https://immich.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://immich.services.tygo.van.den.hurk.dev
+        description:    Store your photo's securely, as a backup.
+        icon:           immich.svg
+        widget:
+            type:       immich
+            url:        https://immich.services.tygo.van.den.hurk.dev
+            key:        {{HOMEPAGE_VAR_APIKEY_IMMICH}}
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ STORAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- Other Services:
+
+    - Mealie:           # TODO : Set up service
+        href:           https://mealie.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://mealie.services.tygo.van.den.hurk.dev
+        description:    Make sure you always have an idea on what to cook! Share and receive recipes with each other! 
+        icon:           mealie.svg
+        widget:
+            type:       mealie
+            url:        https://mealie.services.tygo.van.den.hurk.dev
+            key:        {{HOMEPAGE_VAR_APIKEY_MEALIE}}
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INFRASTRUCTURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
