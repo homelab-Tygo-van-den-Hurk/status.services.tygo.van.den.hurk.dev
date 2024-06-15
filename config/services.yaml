@@ -161,16 +161,16 @@
         description:    An AI engine that can run any AI model.
         icon:           /icons/ollama.svg
         widget:
-          type: customapi
-          url: http://ollama_ai-chat_services_tygo_van_den_hurk_dev:11434/api/tags
+          type:         customapi
+          url:          http://ollama_ai-chat_services_tygo_van_den_hurk_dev:11434/api/tags
           refreshInterval: 10000
-          method: GET
+          method:       GET
           mappings:
-            - field: models
-              label: Models
+            - field:    models
+              label:    Models
               remap:
-              - any: true # will map all other values
-                to: count(totals)
+              - any:    true # will map all other values
+                to:     count(totals)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ STORAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
@@ -240,16 +240,16 @@
 - Infrastructure:
 
     - Reverse Proxy (cloud):
-        href:           ssh://ubuntu@cloud.tygo.van.den.hurk.dev
+        href:           http://oracle-cloud-server.tail9fcea.ts.net:81
         siteMonitor:    http://cloud-reverse-proxy:81
-        description:    My personal reverse proxy server in the cloud. This is the public end point of all my services.
+        description:    The service that guides all the traffic.
         icon:           nginx-proxy-manager.svg
         widget:
-            type:         npm
-            url:          http://cloud-reverse-proxy:81
-            username:     {{HOMEPAGE_VAR_USER_REVERSEPROXY}}
-            password:     {{HOMEPAGE_VAR_PASS_REVERSEPROXY}}
-            fields:       [ "enabled", "disabled" ]
+            type:       npm
+            url:        http://cloud-reverse-proxy:81
+            username:   {{HOMEPAGE_VAR_USER_REVERSEPROXY}}
+            password:   {{HOMEPAGE_VAR_PASS_REVERSEPROXY}}
+            fields:     [ "enabled", "disabled" ]
 
     - Uptime Kuma (cloud):
         href:           https://uptime-kuma.services.tygo.van.den.hurk.dev
@@ -277,7 +277,7 @@
     - Authentik:        # TODO : Set up service
         href:           https://authentik.services.tygo.van.den.hurk.dev
         siteMonitor:    https://authentik.services.tygo.van.den.hurk.dev
-        description:    an Oauth provider, letting you log in on multiple services with the same password.
+        description:    Log into any of my services using this service!
         icon:           authentik.png
         widget:
             type:       authentik

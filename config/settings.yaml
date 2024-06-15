@@ -2,15 +2,15 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/settings
 
-title:          Homepage - Tygo van den Hurk
+title:          Services Status - Tygo van den Hurk
 favicon:        images/favicon.ico
 
 headerStyle:    clean # boxed
 target:         _self
 hideVersion:    true
-statusStyle:    "dot"
-theme: dark
-color: stone
+statusStyle:    dot
+theme:          dark
+color:          stone
 
 background:
     image:      https://images.unsplash.com/photo-1637825891028-564f672aa42c # /images/wallpaper.jpeg
@@ -20,10 +20,10 @@ background:
     opacity:    100 
 
 # quicklaunch:
-#   searchDescriptions:     true
-#   hideInternetSearch:     false # true
-#   showSearchSuggestions:  false # true
-#   hideVisitURL:           false # true
+#     searchDescriptions:     true
+#     hideInternetSearch:     false # true
+#     showSearchSuggestions:  false # true
+#     hideVisitURL:           false # true
 
 layout:
     - Entertainment (Consumption):
