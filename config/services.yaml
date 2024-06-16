@@ -225,6 +225,16 @@
 
 - Other Services:
 
+    - Paperless:        # TODO : Set up service
+        href:           https://paperless.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://paperless.services.tygo.van.den.hurk.dev
+        description:    Save important documents, or invoices automatically.
+        icon:           paperless-ngx.svg
+        widget:
+            type:       paperlessngx
+            url:        https://paperless.services.tygo.van.den.hurk.dev
+            key:        {{HOMEPAGE_VAR_APIKEY_PAPERLESS}}
+          
     - Mealie:           # TODO : Set up service
         href:           https://mealie.services.tygo.van.den.hurk.dev
         siteMonitor:    https://mealie.services.tygo.van.den.hurk.dev
