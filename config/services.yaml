@@ -31,25 +31,25 @@
             # showEpisodeNumber: true # optional, defaults to false
             # expandOneStreamToTwoRows: false # optional, defaults to true
             
-    - Plex:             # TODO : Set up service
-        href:           https://plex.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://plex.services.tygo.van.den.hurk.dev
-        description:    Watch movies and TV show's using Plex.
-        icon:           plex.svg
-        widget:
-            type:       plex
-            url:        https://plex.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_APIKEY_PLEX}}
+    # - Plex:             # TODO : Set up service
+    #     href:           https://plex.services.tygo.van.den.hurk.dev
+    #     siteMonitor:    https://plex.services.tygo.van.den.hurk.dev
+    #     description:    Watch movies and TV show's using Plex.
+    #     icon:           plex.svg
+    #     widget:
+    #         type:       plex
+    #         url:        https://plex.services.tygo.van.den.hurk.dev
+    #         key:        {{HOMEPAGE_VAR_APIKEY_PLEX}}
 
-    - Audiobook shelf:  # TODO : Set up service
-        href:           https://audiobookshelf.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://audiobookshelf.services.tygo.van.den.hurk.dev
-        description:    Allows you to read eBooks, or listen to audio books.
-        icon:           audiobookshelf.svg
-        widget:
-            type:       audiobookshelf
-            url:        https://audiobookshelf.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_APIKEY_AUDIOBOOKSHELF}}
+    # - Audiobook shelf:  # TODO : Set up service
+    #     href:           https://audiobookshelf.services.tygo.van.den.hurk.dev
+    #     siteMonitor:    https://audiobookshelf.services.tygo.van.den.hurk.dev
+    #     description:    Allows you to read eBooks, or listen to audio books.
+    #     icon:           audiobookshelf.svg
+    #     widget:
+    #         type:       audiobookshelf
+    #         url:        https://audiobookshelf.services.tygo.van.den.hurk.dev
+    #         key:        {{HOMEPAGE_VAR_APIKEY_AUDIOBOOKSHELF}}
 
 - Entertainment (Requests): #| Services for requesting Content
 
@@ -85,65 +85,65 @@
 
 - Entertainment (Production): #| Services for getting Content
 
-    - Radarr:           # TODO : Set up service
+    - Radarr:
         href:           https://radarr.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://radarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    http://tygos-nasserver.tail9fcea.ts.net:8000
         description:    Gets movies to watch off the internet.
         icon:           radarr.svg
         widget:
             type:       radarr
-            url:        https://radarr.services.tygo.van.den.hurk.dev
+            url:        http://tygos-nasserver.tail9fcea.ts.net:8000
             key:        {{HOMEPAGE_VAR_APIKEY_RADARR}}
             
-    - Sonarr:           # TODO : Set up service
+    - Sonarr:
         href:           https://sonarr.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://sonarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    http://tygos-nasserver.tail9fcea.ts.net:8001
         description:    Gets shows to watch off the internet.
         icon:           sonarr.svg
         widget:
             type:       sonarr
-            url:        https://sonarr.services.tygo.van.den.hurk.dev
+            url:        http://tygos-nasserver.tail9fcea.ts.net:8001
             key:        {{HOMEPAGE_VAR_APIKEY_SONARR}}
 
-    - Readarr:           # TODO : Set up service
+    - Readarr:
         href:           https://readarr.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://readarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    http://tygos-nasserver.tail9fcea.ts.net:8002
         description:    Gets books to read off the internet.
         icon:           readarr.svg
         widget:
             type:       readarr
-            url:        https://readarr.services.tygo.van.den.hurk.dev
+            url:        http://tygos-nasserver.tail9fcea.ts.net:8002
             key:        {{HOMEPAGE_VAR_APIKEY_READARR}}
-            
-    - Bazarr:           # TODO : Set up service
-        href:           https://bazarr.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://bazarr.services.tygo.van.den.hurk.dev
-        description:    Gets subtitles for movies, or shows off the internet.
-        icon:           bazarr.svg
-        widget:
-            type:       bazarr
-            url:        https://bazarr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_APIKEY_BAZARR}}
-            
-    - Prowlarr:         # TODO : Set up service
-        href:           https://prowlarr.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://prowlarr.services.tygo.van.den.hurk.dev
-        description:    A unified web interface for the R-stack services.
-        icon:           prowlarr.svg
-        widget:
-            type:       prowlarr
-            url:        https://prowlarr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_APIKEY_PROWLARR}}
 
-    - Lidarr:           # TODO : Set up service
+    - Lidarr:
         href:           https://lidarr.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://lidarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    http://tygos-nasserver.tail9fcea.ts.net:8003
         description:    Gets music to listen to.
         icon:           lidarr.svg
         widget:
             type:       lidarr
-            url:        https://lidarr.services.tygo.van.den.hurk.dev
+            url:        http://tygos-nasserver.tail9fcea.ts.net:8003
             key:        {{HOMEPAGE_VAR_APIKEY_LIDARR}}
+    
+    - Bazarr:
+        href:           https://bazarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    http://tygos-nasserver.tail9fcea.ts.net:8004
+        description:    Gets subtitles for movies, or shows off the internet.
+        icon:           bazarr.svg
+        widget:
+            type:       bazarr
+            url:        http://tygos-nasserver.tail9fcea.ts.net:8004
+            key:        {{HOMEPAGE_VAR_APIKEY_BAZARR}}
+        
+    - Prowlarr:
+        href:           https://prowlarr.services.tygo.van.den.hurk.dev
+        siteMonitor:    http://tygos-nasserver.tail9fcea.ts.net:8005
+        description:    A unified web interface for the R-stack services.
+        icon:           prowlarr.svg
+        widget:
+            type:       prowlarr
+            url:        http://tygos-nasserver.tail9fcea.ts.net:8005
+            key:        {{HOMEPAGE_VAR_APIKEY_PROWLARR}}
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SERVICES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
@@ -235,7 +235,7 @@
             url:        https://paperless.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_PAPERLESS}}
           
-    - Mealie:           # TODO : Set up service
+    - Mealie:           
         href:           https://mealie.services.tygo.van.den.hurk.dev
         siteMonitor:    https://mealie.services.tygo.van.den.hurk.dev
         description:    Make sure you always have an idea on what to cook! Share and receive recipes with each other! 
@@ -273,18 +273,18 @@
             slug:       {{HOMEPAGE_VAR_SLUG_UPTIMEKUMA}}
             fields:     ["up", "down", "uptime", "incident"]
     
-    - Pi-Hole:          # TODO : Set up service
-        href:           https://pi-hole.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://pi-hole.services.tygo.van.den.hurk.dev
+    - Pi-Hole:          
+        href:           https://pihole.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://pihole.services.tygo.van.den.hurk.dev
         description:    My personal DNS server. Blocks ads and malicious websites.
         icon:           pi-hole.svg
         widget:
             type:       pihole
-            url:        https://pi-hole.services.tygo.van.den.hurk.dev
-            version:    6
+            url:        https://pihole.services.tygo.van.den.hurk.dev
+            version:    5
             key:        {{HOMEPAGE_VAR_APIKEY_PIHOLE}}
 
-    - Authentik:        # TODO : Set up service
+    - Authentik:        
         href:           https://authentik.services.tygo.van.den.hurk.dev
         siteMonitor:    https://authentik.services.tygo.van.den.hurk.dev
         description:    Log into any of my services using this service!
@@ -294,27 +294,39 @@
             url:        https://authentik.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_AUTHENTIK}}
 
-    - Portainer:        # TODO : Set up service
+    - Portainer (NAS):       
         href:           https://portainer.services.tygo.van.den.hurk.dev
         siteMonitor:    https://portainer.services.tygo.van.den.hurk.dev
-        icon:           portainer.png
-        description:    My portainer instance. This is where I control all my docker containers.
+        icon:           portainer.svg
+        description:    My portainer instance at home. This is where I control all my docker containers.
         widget: 
             type:       portainer
             url:        https://portainer.services.tygo.van.den.hurk.dev
             env:        2
             key:        {{HOMEPAGE_VAR_APIKEY_PORTAINER}}
             fields:     [ "running", "stopped" ]
+    
+    - Portainer (Cloud):        
+        href:           https://portainer.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://portainer.services.tygo.van.den.hurk.dev
+        icon:           portainer.svg
+        description:    My portainer instance in the cloud. This is where I control all my docker containers.
+        widget: 
+            type:       portainer
+            url:        https://portainer.services.tygo.van.den.hurk.dev
+            env:        3
+            key:        {{HOMEPAGE_VAR_APIKEY_PORTAINER}}
+            fields:     [ "running", "stopped" ]
 
-    - Watch Tower:   # TODO : Set up service
-        href:           https://watchtower.services.tygo.van.den.hurk.dev
-        description:    A service that updates containers when a newer version becomes available.
-        siteMonitor:    https://watchtower.services.tygo.van.den.hurk.dev
-        icon:           watchtower.png
-        widget:
-            type:       watchtower
-            url:        https://watchtower.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_APIKEY_WATCHTOWER}}
+    # - Watch Tower:   # TODO : Set up service
+    #     href:           https://watchtower.services.tygo.van.den.hurk.dev
+    #     description:    A service that updates containers when a newer version becomes available.
+    #     siteMonitor:    https://watchtower.services.tygo.van.den.hurk.dev
+    #     icon:           watchtower.svg
+    #     widget:
+    #         type:       watchtower
+    #         url:        https://watchtower.services.tygo.van.den.hurk.dev
+    #         key:        {{HOMEPAGE_VAR_APIKEY_WATCHTOWER}}
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ IOT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
@@ -324,7 +336,7 @@
         href:           https://homebridge.services.tygo.van.den.hurk.dev
         description:    A simple application that emulates Apple Home Kit for devices that do no support it.
         siteMonitor:    https://homebridge.services.tygo.van.den.hurk.dev
-        icon:           homebridge.png
+        icon:           homebridge.svg
         widget:
           type:         homebridge
           url:          https://homebridge.services.tygo.van.den.hurk.dev
@@ -335,7 +347,7 @@
         href:           https://homeassistant.services.tygo.van.den.hurk.dev
         description:    A smart home automation service.
         siteMonitor:    https://homeassistant.services.tygo.van.den.hurk.dev
-        icon:           home-assistant.png
+        icon:           home-assistant.svg
         widget:
             type:       homeassistant
             url:        https://homeassistant.services.tygo.van.den.hurk.dev
@@ -398,7 +410,7 @@
         href:         https://kapoetio.software.tygo.van.den.hurk.dev
         siteMonitor:  https://kapoetio.software.tygo.van.den.hurk.dev
         description:  A game where you can create your own chess boards and pieces.
-        icon:         https://kapoetio.software.tygo.van.den.hurk.dev/assets/icons/applicationIcons/board-game.png
+        icon:         https://kapoetio.software.tygo.van.den.hurk.dev/assets/icons/applicationIcons/board-game.svg
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SERVERS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
@@ -622,7 +634,7 @@
 #     - Prometheus:
 #         href: https://prometheus-prod-1.srv-prod-1.home.clcreative.de
 #         description: prometheus-prod-1 on srv-prod-1
-#         icon: prometheus.png
+#         icon: prometheus.svg
 #         server: srv-prod-1
 #         container: prometheus-prod-1
 #         widget:
@@ -631,7 +643,7 @@
 #     - Grafana:
 #         href: https://grafana-prod-1.srv-prod-1.home.clcreative.de
 #         description: grafana-prod-1 on srv-prod-1
-#         icon: grafana.png
+#         icon: grafana.svg
 #         server: srv-prod-1
 #         container: grafana-prod-1
 

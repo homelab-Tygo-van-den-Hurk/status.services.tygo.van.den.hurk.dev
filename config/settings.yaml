@@ -30,7 +30,7 @@ layout:
         icon: /icons/entertainment.svg
         iconStyle: theme
         style: row
-        columns: 3
+        columns: 1
     
     - Entertainment (Requests):
         icon: /icons/entertainment.svg
