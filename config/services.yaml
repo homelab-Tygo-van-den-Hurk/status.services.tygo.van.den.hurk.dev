@@ -62,26 +62,26 @@
             type:       jellyseerr
             url:        https://jellyseerr.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_JELLYSEERR}}
-
-    - Overseerr:       # TODO : Set up service
-        href:           https://overseerr.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://overseerr.services.tygo.van.den.hurk.dev
-        description:    Request movies and shows to be added to Jellyfin and Plex.
-        icon:           overseerr.svg
-        widget:
-            type:       overseerr
-            url:        https://overseerr.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_APIKEY_OVERSEERR}}
-
-    - Ombi:             # TODO : Set up service
-        href:           https://ombi.services.tygo.van.den.hurk.dev
-        siteMonitor:    https://ombi.services.tygo.van.den.hurk.dev
-        description:    Request TV shows and movies.
-        icon:           ombi.svg
-        widget:
-            type:       ombi
-            url:        https://ombi.services.tygo.van.den.hurk.dev
-            key:        {{HOMEPAGE_VAR_APIKEY_OMBI}}
+ 
+    # - Overseerr:       # TODO : Set up service
+        # href:           https://overseerr.services.tygo.van.den.hurk.dev
+        # siteMonitor:    https://overseerr.services.tygo.van.den.hurk.dev
+        # description:    Request movies and shows to be added to Jellyfin and Plex.
+        # icon:           overseerr.svg
+        # widget:
+            # type:       overseerr
+            # url:        https://overseerr.services.tygo.van.den.hurk.dev
+            # key:        {{HOMEPAGE_VAR_APIKEY_OVERSEERR}}
+ 
+    # - Ombi:             # TODO : Set up service
+        # href:           https://ombi.services.tygo.van.den.hurk.dev
+        # siteMonitor:    https://ombi.services.tygo.van.den.hurk.dev
+        # description:    Request TV shows and movies.
+        # icon:           ombi.svg
+        # widget:
+            # type:       ombi
+            # url:        https://ombi.services.tygo.van.den.hurk.dev
+            # key:        {{HOMEPAGE_VAR_APIKEY_OMBI}}
 
 - Entertainment (Production): #| Services for getting Content
 
