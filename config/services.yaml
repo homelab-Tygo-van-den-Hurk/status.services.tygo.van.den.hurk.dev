@@ -199,6 +199,27 @@
             url:        https://nextcloud.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_NEXTCLOUD}}
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 3D Printing ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+- 3D-Printing Services: #| 3D Printing Applications
+
+    - Octoprint:        # TODO : Set up service
+        href:           https://octoprint.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://octoprint.services.tygo.van.den.hurk.dev
+        description:    A service that controls 3D printers..
+        icon:           octoprint.png
+        widget:
+            type: octoprint
+            url: https://octoprint.services.tygo.van.den.hurk.dev
+            key: {{HOMEPAGE_VAR_APIKEY_OCTOPRINT}}
+            fields: ["printer_state", "temp_tool", "temp_bed", "job_completion"]
+
+    - Cura:             # TODO : Set up service
+        href:           https://cura.services.tygo.van.den.hurk.dev
+        siteMonitor:    https://cura.services.tygo.van.den.hurk.dev
+        description:    Slice 3D models into gCODE to sent to the printer.
+        icon:           cura.svg
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ STORAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 - Other Services:

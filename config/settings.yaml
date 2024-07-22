@@ -19,12 +19,6 @@ background:
     brightness: 100
     opacity:    100 
 
-# quicklaunch:
-#     searchDescriptions:     true
-#     hideInternetSearch:     false # true
-#     showSearchSuggestions:  false # true
-#     hideVisitURL:           false # true
-
 layout:
     - Entertainment (Frontend):
         icon: /icons/entertainment.svg
@@ -45,7 +39,7 @@ layout:
         columns: 2
 
     - Photo Storage Services:
-        icon: /icons/storage.svg
+        icon: /icons/photos.svg
         iconStyle: theme
         style: row
         columns: 2
@@ -56,8 +50,14 @@ layout:
         style: row
         columns: 3
 
+    - 3D-Printing Services:
+        icon: /icons/3d-printer.svg
+        iconStyle: theme
+        style: row
+        columns: 2
+
     - Other Services:
-        icon: #/icons/entertainment.svg
+        icon: /icons/services.svg
         iconStyle: theme
         style: row
         columns: 2
@@ -90,7 +90,7 @@ layout:
         icon: /icons/documentation.svg
         iconStyle: theme
         style: row
-        columns: 4
+        columns: 1
 
     - Servers:
         icon: /icons/server.svg
