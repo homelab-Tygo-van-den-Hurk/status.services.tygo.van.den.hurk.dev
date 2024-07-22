@@ -1,10 +1,3 @@
-# variables:
-#   plex_url: "https://plex.services.tygo.van.den.hurk.dev"
-
-# ---
-# For configuration options and examples, please see:
-# https://gethomepage.dev/latest/configs/services
-
 # Octoprint
 # Uptime Kuma 
 # Home Assistant
@@ -14,7 +7,7 @@
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ENTERTAINMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-- Entertainment (Consumption): #| Services for consuming Content
+- Entertainment (Frontend): #| Services for serving Content
 
     - Jellyfin:
         href:           https://jellyfin.services.tygo.van.den.hurk.dev
@@ -25,33 +18,8 @@
             type:       jellyfin
             url:        https://jellyfin.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_JELLYFIN}}
-            enableBlocks: true # optional, defaults to false
-            enableNowPlaying: false # optional, defaults to true
-            # enableUser: true # optional, defaults to false
-            # showEpisodeNumber: true # optional, defaults to false
-            # expandOneStreamToTwoRows: false # optional, defaults to true
-            
-    # - Plex:             # TODO : Set up service
-    #     href:           https://plex.services.tygo.van.den.hurk.dev
-    #     siteMonitor:    https://plex.services.tygo.van.den.hurk.dev
-    #     description:    Watch movies and TV show's using Plex.
-    #     icon:           plex.svg
-    #     widget:
-    #         type:       plex
-    #         url:        https://plex.services.tygo.van.den.hurk.dev
-    #         key:        {{HOMEPAGE_VAR_APIKEY_PLEX}}
-
-    # - Audiobook shelf:  # TODO : Set up service
-    #     href:           https://audiobookshelf.services.tygo.van.den.hurk.dev
-    #     siteMonitor:    https://audiobookshelf.services.tygo.van.den.hurk.dev
-    #     description:    Allows you to read eBooks, or listen to audio books.
-    #     icon:           audiobookshelf.svg
-    #     widget:
-    #         type:       audiobookshelf
-    #         url:        https://audiobookshelf.services.tygo.van.den.hurk.dev
-    #         key:        {{HOMEPAGE_VAR_APIKEY_AUDIOBOOKSHELF}}
-
-- Entertainment (Requests): #| Services for requesting Content
+            enableBlocks: true
+            enableNowPlaying: false
 
     - Jellyseerr:       # TODO : Set up service
         href:           https://jellyseerr.services.tygo.van.den.hurk.dev
@@ -62,28 +30,8 @@
             type:       jellyseerr
             url:        https://jellyseerr.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_JELLYSEERR}}
- 
-    # - Overseerr:       # TODO : Set up service
-        # href:           https://overseerr.services.tygo.van.den.hurk.dev
-        # siteMonitor:    https://overseerr.services.tygo.van.den.hurk.dev
-        # description:    Request movies and shows to be added to Jellyfin and Plex.
-        # icon:           overseerr.svg
-        # widget:
-            # type:       overseerr
-            # url:        https://overseerr.services.tygo.van.den.hurk.dev
-            # key:        {{HOMEPAGE_VAR_APIKEY_OVERSEERR}}
- 
-    # - Ombi:             # TODO : Set up service
-        # href:           https://ombi.services.tygo.van.den.hurk.dev
-        # siteMonitor:    https://ombi.services.tygo.van.den.hurk.dev
-        # description:    Request TV shows and movies.
-        # icon:           ombi.svg
-        # widget:
-            # type:       ombi
-            # url:        https://ombi.services.tygo.van.den.hurk.dev
-            # key:        {{HOMEPAGE_VAR_APIKEY_OMBI}}
 
-- Entertainment (Production): #| Services for getting Content
+- Entertainment (Backend): #| Services for getting Content
 
     - Radarr (HD):
         href:           https://radarr.services.tygo.van.den.hurk.dev
@@ -255,7 +203,7 @@
 
 - Other Services:
 
-    - Paperless:        # TODO : Set up service
+    - Paperless:
         href:           https://paperless.services.tygo.van.den.hurk.dev
         siteMonitor:    https://paperless.services.tygo.van.den.hurk.dev
         description:    Save important documents, or invoices automatically.
@@ -382,15 +330,6 @@
             type:       homeassistant
             url:        https://homeassistant.services.tygo.van.den.hurk.dev
             key:        {{HOMEPAGE_VAR_APIKEY_HOMEASSISTANT}}
-            # custom:
-            #     - state: sensor.total_power
-            #     - state: sensor.total_energy_today
-            #       label: energy today
-            #     - template: "{{states.switch|selectattr('state','equalto','on')|list|length}}"
-            #       label: switches on
-            #     - state: weather.forecast_home
-            #       label: wind speed
-            #       value: "{attributes.wind_speed} {attributes.wind_speed_unit}"
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ WEBSITES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 

@@ -26,19 +26,13 @@ background:
 #     hideVisitURL:           false # true
 
 layout:
-    - Entertainment (Consumption):
+    - Entertainment (Frontend):
         icon: /icons/entertainment.svg
         iconStyle: theme
         style: row
-        columns: 1
+        columns: 2
     
-    - Entertainment (Requests):
-        icon: /icons/entertainment.svg
-        iconStyle: theme
-        style: row
-        columns: 1
-    
-    - Entertainment (Production):
+    - Entertainment (Backend):
         icon: /icons/entertainment.svg
         iconStyle: theme
         style: row
@@ -91,6 +85,12 @@ layout:
         iconStyle: theme
         style: row
         columns: 2
+
+    - Documentation:
+        icon: /icons/documentation.svg
+        iconStyle: theme
+        style: row
+        columns: 4
 
     - Servers:
         icon: /icons/server.svg
