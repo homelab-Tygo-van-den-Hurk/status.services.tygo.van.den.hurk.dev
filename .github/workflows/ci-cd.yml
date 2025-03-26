@@ -19,3 +19,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: ${{ secrets.SCRIPT }}
+        env:
+          DEPLOY_PROJECT: ${{ secrets.DEPLOY_PROJECT }}
+
